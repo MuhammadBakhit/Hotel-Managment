@@ -1,0 +1,19 @@
+
+textarea {
+  border: 1px solid #203FC7 !important;
+}
+.text-area-style {
+  @apply w-full border border-blue-400 rounded-md p-3 focus:outline-none focus:ring-2
+   focus:ring-blue-500
+}
+.rate::after{
+  content: '';
+  position: absolute;
+  right: 0rem;
+  top: .5rem;
+  width: 2px;
+  height: 100%;
+  background-color: #203FC7;
+  opacity: .3;
+  border-radius: .5rem;
+}

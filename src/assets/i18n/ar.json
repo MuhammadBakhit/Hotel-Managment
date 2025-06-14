@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "explore": "استكشف",
+    "reviews": "التقييمات",
+    "favorites": "المفضلة",
+    "register": "تسجيل",
+    "login": "تسجيل الدخول"
+  },
+  "Cards": {
+    "mostPopular": "أكثر الإعلانات شهرة",
+    "beautyBackyard": "منازل بحدائق جميلة",
+    "largeLivingRoom": "فنادق بغرف معيشة واسعة",
+    "perNight": "لكل ليلة"
+  },
+  "homeSection": {
+    "title": "انسى الأعمال المرهقة، وابدأ عطلتك القادمة",
+    "description": "نحن نوفر لك كل ما تحتاجه للاستمتاع بإجازتك مع العائلة. حان الوقت لصنع لحظات لا تُنسى من جديد.",
+    "bookingTitle": "ابدأ الحجز",
+    "pickDate": "اختر التاريخ",
+    "capacity": "السعة",
+    "person": "شخص",
+    "exploreBtn": "استكشاف"
+  },
+  "adsSection": {
+    "title": "الإعلانات",
+    "off": "خصم",
+    "postedBy": "تم النشر بواسطة:"
+  },
+  "testimonial": {
+    "title": "عائلة سعيدة",
+    "description": "يا لها من رحلة رائعة مع عائلتي وسأكررها قريبًا بالتأكيد ...",
+    "nameAndTitle": "أنغا، مصمم منتجات"
+  },
+  "footer": {
+    "title": "نحن نجعل عطلتك الجمالية لا تُنسى وفورية.",
+    "beginner": "للمبتدئين",
+    "newAccount": "حساب جديد",
+    "booking": "ابدأ بحجز غرفة",
+    "payment": "استخدم وسائل الدفع",
+    "exploreUs": "اكتشف المزيد عنا",
+    "careers": "وظائفنا",
+    "Privacy": "الخصوصية",
+    "termsAndConditions": "الشروط والأحكام",
+    "connectUs": "تواصل معنا"
+  },
+  "authDialog": {
+    "title": "من فضلك سجّل الدخول للمتابعة!",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب"
+  },
+  "userProfile": {
+    "title": "الملف الشخصي",
+    "edit": "تعديل الملف الشخصي",
+    "userName": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "country": "الدولة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "confirmPasswordDesc":"تأكيد كلمة المرور الخاصة بك",
+    "save": "حفظ"
+  }
+}

@@ -1,0 +1,13 @@
+
+
+.img-container img {
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover  {
+  transform: scale(1.02);
+}
+
+.capacity{
+  @apply w-3/4 flex  bg-[#F5F6F8]  rounded-md  items-center justify-between ;
+}

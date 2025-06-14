@@ -1,0 +1,48 @@
+<h2 class="auth-title">Sign in</h2>
+<p class="auth-text ">
+  If you don’t have an account register <br />
+  You can <span class="text-secondary">
+    <a routerLink="/auth/register">Register here !</a></span>
+</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <app-auth-inputs formControlName="email" type="email" label="Email address" placeholder="Please type here ..." id="Email"
+    value="">
+  </app-auth-inputs>
+  <small class="warning-text" *ngIf="loginForm?.get('email')?.invalid && loginForm?.get('email')?.touched">
+    <span *ngIf="loginForm?.get('email')?.errors?.['required']">Email is required.</span>
+    <span *ngIf="loginForm?.get('email')?.errors?.['email']">Enter a valid email.</span>
+  </small>
+
+  <app-auth-inputs formControlName="password" [type]="isPasswordHidden ? 'password' : 'text'" label="Password"
+    placeholder="Please type here ..." id="password" value="">
+    <a (click)="isPasswordHidden = !isPasswordHidden">
+      <span
+        class="eye-icon material-icons">
+        {{ isPasswordHidden ? 'visibility_off' : 'visibility' }}
+      </span>
+    </a>
+  </app-auth-inputs>
+
+  <small class="warning-text" *ngIf="loginForm?.get('password')?.touched">
+    <span *ngIf="loginForm?.get('password')?.errors?.['required']; else checkMinLength">
+      Password is required.
+    </span>
+    <ng-template #checkMinLength>
+      <span *ngIf="loginForm?.get('password')?.errors?.['minlength']; else checkPattern">
+        Password must be at least 6 characters.
+      </span>
+    </ng-template>
+    <ng-template #checkPattern>
+      <span *ngIf="loginForm?.get('password')?.errors?.['pattern']">
+        The password must include at least one lowercase letter,
+        one uppercase letter, one digit, and one special character.
+      </span>
+    </ng-template>
+  </small>
+
+  <button pButton type="submit" label="login" [disabled]="loginForm.invalid"
+  [ngStyle]="{'pointer-events': loginForm.invalid ? 'none' : 'auto' }" 
+  class="form-button hover:[box-shadow:0px_8px_15px_0px_rgba(50,82,223,0.3)]">
+  </button>
+</form>

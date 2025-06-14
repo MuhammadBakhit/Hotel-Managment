@@ -1,0 +1,74 @@
+<div class="min-h-screen flex flex-col items-center px-4 py-4">
+  <!-- Step Indicator -->
+  <p-steps
+    [model]="steps"
+    [(activeIndex)]="activeIndex"
+    [readonly]="true"
+    class="mb-6"
+  ></p-steps>
+
+  <div
+    *ngIf="activeIndex === 0 || activeIndex === 1"
+    class="w-full max-w-6xl flex flex-col flex-grow"
+  >
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h2 class="text-3xl font-bold mb-1" style="color: #152C5B;">Payment</h2>
+      <p style="color: #B0B0B0;">Kindly follow the instructions below</p>
+    </div>
+
+    <!-- Main Layout (Responsive) -->
+    <div class="flex flex-col lg:flex-row gap-4">
+      <!-- Left Side -->
+      <div class="w-full lg:w-1/2 flex flex-col justify-evenly text-sm text-gray-700 p-4">
+        <h2 class="text-lg font-semibold text-gray-800">Transfer Pembayaran:</h2>
+        <div>
+          <p class="mb-2"><strong>Tax:</strong> 10%</p>
+          <p class="mb-2"><strong>Subtotal:</strong> $480 USD</p>
+          <p class="mb-2"><strong>Total:</strong> $580 USD</p>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-4">
+            <img src="/assets/img/bca.png" class="w-20" alt="BCA" />
+            <div>
+              <p class="font-semibold">Bank Central Asia</p>
+              <p>2208 1996</p>
+              <p>BuildWith Angga</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <img src="/assets/img/mandiri.png" class="w-20" alt="Mandiri" />
+            <div>
+              <p class="font-semibold">Bank Mandiri</p>
+              <p>2208 1996</p>
+              <p>BuildWith Angga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- line -->
+      <div class="hidden lg:block w-px bg-gray-300"></div>
+
+      <!-- Right Side -->
+      <div class="w-full lg:w-1/2">
+        <app-payment (nextStep)="goNext()"></app-payment>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="flex justify-center pt-4">
+      <button
+        pButton
+        label="Continue to Book"
+        [disabled]="activeIndex === 0"
+        class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+        (click)="payBooking()"
+      ></button>
+    </div>
+  </div>
+
+  <div *ngIf="activeIndex === 2">
+    <app-completed></app-completed>
+  </div>
+</div>

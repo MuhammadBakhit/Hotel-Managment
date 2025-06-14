@@ -1,0 +1,23 @@
+<p-toolbar class="navbar">
+    <div class="p-toolbar-group-right d-flex align-items-center">
+    <button
+        pButton
+        type="button"
+        icon="pi pi-bell"
+        class="p-button-rounded p-button-text notification-btn position-relative"
+        pBadge
+        value="1"
+        badgeStyleClass="p-badge-danger"
+    ></button>
+    <div class="user-info d-flex align-items-center mx-3">
+        <div class="relative w-8 h-8">
+            <img
+              [src]="'../../../../assets/img/profile.png'"
+              alt="User Profile"
+              class="w-full h-full rounded-full object-cover border-2 border-green-500 shadow-xl transition-transform duration-300 hover:scale-105"
+            />
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full"></span>
+          </div>
+      </div>
+    </div>
+</p-toolbar>
