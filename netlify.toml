@@ -1,6 +1,6 @@
 [build]
   command = "ng build"
-  publish = "dist\hotel-management"
+  publish = "dist/hotel-management"
 
 [[redirects]]
   from = "/*"
