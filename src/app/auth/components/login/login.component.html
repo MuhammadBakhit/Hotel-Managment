@@ -22,6 +22,7 @@
         {{ isPasswordHidden ? 'visibility_off' : 'visibility' }}
       </span>
     </a>
+    <p class="cursor-pointer font-bold text-end" routerLink="/auth/forgetPassword">Forgot your password?</p>
   </app-auth-inputs>
 
   <small class="warning-text" *ngIf="loginForm?.get('password')?.touched">
